@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 
 export default function BrandSection() {
@@ -313,10 +314,26 @@ export default function BrandSection() {
             </h3>
 
             <div className="space-y-3 text-gray-400">
-              <p>Studio</p>
-              <p>Wear</p>
-              <p>Fire & Safety</p>
-            </div>
+  <Link
+    href="https://studio.lamerix.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block hover:text-[#20B2AA] transition-colors"
+  >
+    Studio
+  </Link>
+
+  <Link
+    href="https://wear.lamerix.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block hover:text-[#20B2AA] transition-colors"
+  >
+    Wear
+  </Link>
+
+  <p>Fire & Safety</p>
+</div>
           </div>
 
           {/* CONNECT */}

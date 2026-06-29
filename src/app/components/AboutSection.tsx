@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 
 export default function AboutSection() {
@@ -233,27 +234,30 @@ export default function AboutSection() {
                   <p>VISUALIZATION</p>
                 </div>
 
-                <button
-                  className="
-                    mt-auto
-                    border
-                    px-7
-                    py-4
-                    tracking-[4px]
-                    text-sm
-                    w-fit
-                    transition-all
-                    duration-500
-                    hover:bg-[#20B2AA]/10
-                    hover:shadow-[0_0_20px_rgba(32,178,170,0.4)]
-                  "
-                  style={{
-                    borderColor: "#20B2AA",
-                    color: "#20B2AA",
-                  }}
-                >
-                  ENTER STUDIO →
-                </button>
+                <Link
+  href="https://studio.lamerix.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    mt-auto
+    border
+    px-7
+    py-4
+    tracking-[4px]
+    text-sm
+    w-fit
+    transition-all
+    duration-500
+    hover:bg-[#20B2AA]/10
+    hover:shadow-[0_0_20px_rgba(32,178,170,0.4)]
+  "
+  style={{
+    borderColor: "#20B2AA",
+    color: "#20B2AA",
+  }}
+>
+  ENTER STUDIO →
+</Link>
 
               </div>
 

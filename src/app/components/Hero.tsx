@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <section
       className="
+        hero-section
         relative
         h-screen
         overflow-hidden
@@ -20,48 +22,55 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/35"></div>
 
       {/* Navbar */}
-      <nav className="relative z-20 flex justify-between items-center px-10 md:px-20 py-10">
+      <nav className="relative z-20 flex items-center justify-between gap-4 px-5 py-7 sm:px-8 md:px-20 md:py-10">
 
         {/* Logo */}
-        <Image
-          src="/images/logo.jpg"
-          alt="Lamerix Logo"
-          width={220}
-          height={70}
-          priority
-          className="object-contain"
-        />
+        <Link href="/" aria-label="LAMERIX home" className="shrink-0">
+          <Image
+            src="/images/logo.jpg"
+            alt="Lamerix Logo"
+            width={220}
+            height={70}
+            priority
+            className="w-[165px] object-contain sm:w-[190px] md:w-[220px]"
+            style={{ height: "auto" }}
+          />
+        </Link>
 
         {/* Menu */}
         <div
           className="
             flex
-            gap-10
-            text-xs
+            gap-2
+            text-[7px]
+            tracking-[2px]
+            sm:gap-5
+            sm:text-[10px]
+            md:gap-10
             md:text-sm
-            tracking-[4px]
+            md:tracking-[4px]
             text-white
           "
         >
-          <p className="cursor-pointer hover:text-[#20B2AA] transition-all duration-300">
+          <Link href="#about" className="cursor-pointer hover:text-[#20B2AA] transition-all duration-300">
             ABOUT
-          </p>
+          </Link>
 
-          <p className="cursor-pointer hover:text-[#20B2AA] transition-all duration-300">
+          <Link href="#about" className="cursor-pointer hover:text-[#20B2AA] transition-all duration-300">
             OUR VISION
-          </p>
+          </Link>
 
-          <p className="cursor-pointer hover:text-[#20B2AA] transition-all duration-300">
+          <Link href="/contact" className="cursor-pointer hover:text-[#20B2AA] transition-all duration-300">
             CONTACT
-          </p>
+          </Link>
         </div>
 
       </nav>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center h-[75vh] px-10 md:px-24">
+      <div className="relative z-10 flex h-[75vh] items-center px-5 sm:px-8 md:px-24">
 
-        <div className="max-w-[700px]">
+        <div className="hero-copy max-w-[700px] md:-translate-y-16">
 
           {/* Small Text */}
           <p
@@ -82,10 +91,12 @@ export default function Hero() {
 
             <h1
               className="
-                text-[80px]
-                md:text-[170px]
+                text-[clamp(3.25rem,16.5vw,10.625rem)]
+                lg:text-[clamp(3.25rem,12vw,10.625rem)]
                 font-black
                 leading-none
+                tracking-[clamp(4px,1.5vw,12px)]
+                whitespace-nowrap
               "
               style={{
                 color: "#20B2AA",
@@ -141,9 +152,13 @@ export default function Hero() {
           </p>
 
           {/* Button */}
-          <button
+          <Link
+            href="#about"
             className="
-              mt-12
+              mt-10
+              inline-flex
+              items-center
+              justify-center
               border
               px-10
               py-4
@@ -161,67 +176,8 @@ export default function Hero() {
             }}
           >
             EXPLORE OUR WORLD
-          </button>
+          </Link>
 
-        </div>
-
-      </div>
-
-      {/* Left Scroll Indicator */}
-      <div
-        className="
-          absolute
-          left-6
-          bottom-20
-          z-30
-          flex
-          flex-col
-          items-center
-        "
-      >
-
-        {/* Mouse Icon */}
-        <div
-          className="
-            w-[24px]
-            h-[42px]
-            border
-            rounded-full
-            flex
-            justify-center
-            items-start
-            pt-2
-          "
-          style={{
-            borderColor: "#20B2AA",
-          }}
-        >
-          <div
-            className="
-              w-[4px]
-              h-[8px]
-              rounded-full
-              animate-bounce
-            "
-            style={{
-              background: "#20B2AA",
-            }}
-          ></div>
-        </div>
-
-        {/* Vertical Text */}
-        <div
-          className="
-            mt-3
-            text-[9px]
-            tracking-[5px]
-            writing-mode-vertical
-          "
-          style={{
-            color: "#20B2AA",
-          }}
-        >
-          SCROLL
         </div>
 
       </div>
@@ -229,6 +185,7 @@ export default function Hero() {
       {/* Bottom Features */}
       <div
         className="
+          hero-features
           absolute
           bottom-10
           left-20

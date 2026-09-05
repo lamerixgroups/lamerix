@@ -17,7 +17,10 @@ export default function BrandSection() {
             alt="Brand Building"
             fill
             priority
-            className="object-cover object-center opacity-90"
+            unoptimized
+            sizes="100vw"
+            loading="eager"
+            className="brand-image object-cover object-center opacity-90"
           />
         </div>
 
@@ -28,7 +31,7 @@ export default function BrandSection() {
         <div className="relative z-10 flex">
 
           {/* LEFT SCROLL */}
-          <div className="hidden md:flex flex-col items-center w-[90px] pt-20 sticky top-0 h-screen">
+          <div className="section-scroll-indicator hidden md:flex flex-col items-center w-[90px] pt-20 sticky top-0 h-screen" style={{ display: "none" }}>
 
             <div className="text-white text-3xl font-light">
               03
@@ -120,7 +123,7 @@ export default function BrandSection() {
             </div>
 
             {/* FEATURES */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-16 max-w-[900px]">
+            <div className="grid grid-cols-1 gap-10 mt-16 max-w-[900px] sm:grid-cols-2 md:grid-cols-4">
 
               {/* ITEM */}
               <div>
@@ -216,10 +219,13 @@ export default function BrandSection() {
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0">
           <Image
-            src="/images/wave-bg.png"
-            alt="Wave Background"
+            src="/images/hero-bg.png"
+            alt="LAMERIX background"
             fill
-            className="object-cover object-center opacity-70"
+            unoptimized
+            sizes="100vw"
+            loading="eager"
+            className="cta-image object-cover object-center opacity-70"
           />
         </div>
 
@@ -235,7 +241,7 @@ export default function BrandSection() {
               color: "#20B2AA",
             }}
           >
-            LET'S BUILD THE FUTURE TOGETHER
+            LET&apos;S BUILD THE FUTURE TOGETHER
           </p>
 
           <h2 className="text-[34px] md:text-[64px] font-light leading-tight">
@@ -246,9 +252,13 @@ export default function BrandSection() {
             Explore our domains or get in touch with us.
           </p>
 
-          <button
+          <Link
+            href="/contact"
             className="
               mt-10
+              inline-flex
+              items-center
+              justify-center
               border
               px-10
               py-4
@@ -265,7 +275,7 @@ export default function BrandSection() {
             }}
           >
             GET IN TOUCH →
-          </button>
+          </Link>
 
         </div>
 

@@ -32,6 +32,42 @@ body {
   scrollbar-width: none;
 }
 
+.hero-section {
+  background-position: center center;
+  background-size: cover;
+}
+
+.domain-image,
+.brand-image,
+.cta-image {
+  object-position: center center;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero-section {
+    background-position: 58% center;
+  }
+
+  .domain-image {
+    object-position: center 38%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    background-position: 64% center;
+  }
+
+  .domain-image {
+    object-position: center 32%;
+  }
+
+  .brand-image,
+  .cta-image {
+    object-position: 62% center;
+  }
+}
+
 /* Chrome / Edge / Safari */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -91,4 +127,31 @@ body::-webkit-scrollbar {
 
 .scroll-dot {
   animation: scrollMove 3s ease-in-out infinite;
+}
+
+.section-scroll-indicator {
+  display: none !important;
+}
+
+.contact-input {
+  border: 1px solid #1c3033;
+  background: #010202;
+  color: #e9ffff;
+  font-size: 9px;
+  min-height: 32px;
+  padding: 0 10px;
+  outline: none;
+}
+
+.contact-input::placeholder {
+  color: #6a7778;
+}
+
+.contact-input:focus {
+  border-color: #00d9e8;
+  box-shadow: 0 0 12px rgba(0, 217, 232, 0.12);
+}
+
+textarea.contact-input {
+  padding-top: 10px;
 }

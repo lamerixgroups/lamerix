@@ -42,7 +42,7 @@ export default function AboutSection() {
 
         {/* LEFT SCROLL INDICATOR */}
         <div
-          className="
+          className="section-scroll-indicator
             hidden
             md:flex
             flex-col
@@ -53,6 +53,7 @@ export default function AboutSection() {
             h-screen
             pt-20
           "
+          style={{ display: "none" }}
         >
 
           <div className="w-[1px] h-[70px] bg-white/20"></div>
@@ -196,8 +197,11 @@ export default function AboutSection() {
                 src="/images/studio.png"
                 alt="Studio"
                 fill
+                unoptimized
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                loading="eager"
                 className="
-                  object-cover
+                  domain-image object-cover
                   transition-all
                   duration-700
                   group-hover:scale-[1.05]
@@ -301,8 +305,11 @@ export default function AboutSection() {
                 src="/images/wear.png"
                 alt="Wear"
                 fill
+                unoptimized
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                loading="eager"
                 className="
-                  object-cover
+                  domain-image object-cover
                   transition-all
                   duration-700
                   group-hover:scale-[1.05]
@@ -403,8 +410,11 @@ export default function AboutSection() {
                 src="/images/safety.png"
                 alt="Safety"
                 fill
+                unoptimized
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                loading="eager"
                 className="
-                  object-cover
+                  domain-image object-cover
                   transition-all
                   duration-700
                   group-hover:scale-[1.05]

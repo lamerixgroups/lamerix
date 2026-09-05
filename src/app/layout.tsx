@@ -1,5 +1,4 @@
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata = {

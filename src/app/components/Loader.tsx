@@ -23,17 +23,11 @@ export default function Loader() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6">
+      <div className="relative z-10 w-full max-w-[1200px] px-6 text-center sm:px-8">
 
         {/* Title */}
         <h1
-          className="
-            text-[80px]
-            md:text-[190px]
-            font-black
-            tracking-[12px]
-            leading-none
-          "
+          className="text-[clamp(3.5rem,15vw,11.875rem)] font-black leading-none tracking-[clamp(4px,1.2vw,12px)] whitespace-nowrap"
           style={{
             color: "#20B2AA",
             textShadow: "0 0 20px rgba(32,178,170,0.12)",
@@ -44,13 +38,7 @@ export default function Loader() {
 
         {/* Tagline */}
         <p
-          className="
-            mt-8
-            text-gray-300
-            text-[10px]
-            md:text-[18px]
-            tracking-[5px]
-          "
+          className="mt-8 whitespace-nowrap text-[clamp(7px,1.5vw,18px)] tracking-[clamp(1px,0.35vw,5px)] text-gray-300"
         >
           BRINGING IDEAS TO LIFE • CRAFTING EXPERIENCES • BUILDING IMPACT
         </p>
